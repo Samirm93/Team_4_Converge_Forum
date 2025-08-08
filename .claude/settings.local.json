@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan make:migration:*)",
+      "Bash(php artisan make:model:*)",
+      "Bash(php artisan tinker:*)",
+      "Bash(php artisan make:factory:*)",
+      "Bash(composer:*)",
+      "Bash(del \"resources\\views\\components\\application-logo.blade.php\")",
+      "Bash(del \"resources\\views\\components\\dropdown.blade.php\")",
+      "Bash(del \"resources\\views\\components\\modal.blade.php\")",
+      "Bash(rm:*)",
+      "Bash(php artisan vendor:publish:*)"
+    ],
+    "deny": []
+  }
+}

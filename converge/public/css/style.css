@@ -1,0 +1,298 @@
+
+
+/* CSS Custom Properties for Elegant Dark Theme */
+:root {
+    /* Layout Properties */
+    --navbar-height: 76px;              /* Fixed navbar height for sticky calculations */
+    
+    /* Dark Theme Color Palette */
+    --converge-bg-primary: #0f0f23;     /* Deep navy background */
+    --converge-bg-secondary: #1a1a2e;   /* Card/component background */
+    --converge-bg-tertiary: #16213e;    /* Elevated elements */
+    --converge-surface: #252545;        /* Interactive surfaces */
+
+    /* Text Colors */
+    --converge-text-primary: #e2e8f0;   /* Primary text - high contrast */
+    --converge-text-secondary: #94a3b8; /* Secondary text - muted */
+    --converge-text-tertiary: #64748b;  /* Tertiary text - subtle */
+
+    /* Accent Colors - Refined from logo */
+    --converge-accent-blue: #3b82f6;    /* Refined blue accent */
+    --converge-accent-orange: #f59e0b;  /* Refined orange accent */
+    --converge-accent-green: #10b981;   /* Refined green accent */
+    --converge-accent-purple: #8b5cf6;  /* Additional purple accent */
+
+    /* Border Colors */
+    --converge-border-light: #374151;   /* Subtle borders */
+    --converge-border-medium: #4b5563;  /* Medium borders */
+    --converge-border-heavy: #6b7280;   /* Strong borders */
+
+    /* Utility Colors */
+    --converge-success: #10b981;
+    --converge-warning: #f59e0b;
+    --converge-error: #ef4444;
+    --converge-info: #3b82f6;
+}
+
+/* Base Dark Theme Styles */
+body {
+    background-color: var(--converge-bg-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--converge-text-primary);
+    line-height: 1.6;
+}
+
+/* Bootstrap Dark Theme Overrides */
+.bg-white {
+    background-color: var(--converge-bg-secondary) !important;
+    color: var(--converge-text-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--converge-bg-tertiary) !important;
+    color: var(--converge-text-primary) !important;
+}
+
+.text-dark {
+    color: var(--converge-text-primary) !important;
+}
+
+.text-muted {
+    color: var(--converge-text-secondary) !important;
+}
+
+.border {
+    border-color: var(--converge-border-light) !important;
+}
+
+.icon-1x {
+    font-size: 24px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-black, .text-hover-black:hover {
+    color: #000 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+#searchBar {
+    flex-grow: 1;
+    margin-left: 35%;
+}
+
+/* ========================================
+   CONVERGE DESIGN SYSTEM UTILITIES
+======================================== */
+
+/* Dark Theme Shadow Utilities */
+.converge-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.converge-shadow-lg {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Controls Dark Theme */
+.form-control {
+    background-color: var(--converge-surface);
+    border-color: var(--converge-border-medium);
+    color: var(--converge-text-primary);
+}
+
+.form-control:focus {
+    background-color: var(--converge-surface);
+    border-color: var(--converge-accent-blue);
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+    color: var(--converge-text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--converge-text-tertiary);
+}
+
+/* Dark Theme Color Utilities */
+.text-converge-primary { color: var(--converge-text-primary) !important; }
+.text-converge-secondary { color: var(--converge-text-secondary) !important; }
+.text-converge-accent-blue { color: var(--converge-accent-blue) !important; }
+.text-converge-accent-orange { color: var(--converge-accent-orange) !important; }
+.text-converge-accent-green { color: var(--converge-accent-green) !important; }
+.text-converge-accent-purple { color: var(--converge-accent-purple) !important; }
+
+.bg-converge-primary { background-color: var(--converge-bg-primary) !important; }
+.bg-converge-secondary { background-color: var(--converge-bg-secondary) !important; }
+.bg-converge-tertiary { background-color: var(--converge-bg-tertiary) !important; }
+.bg-converge-surface { background-color: var(--converge-surface) !important; }
+
+.border-converge-light { border-color: var(--converge-border-light) !important; }
+.border-converge-medium { border-color: var(--converge-border-medium) !important; }
+.border-converge-blue { border-color: var(--converge-accent-blue) !important; }
+.border-converge-orange { border-color: var(--converge-accent-orange) !important; }
+.border-converge-green { border-color: var(--converge-accent-green) !important; }
+
+/* Override Bootstrap Colors for Dark Theme */
+.text-primary, a.text-primary:focus, a.text-primary:hover {
+    color: var(--converge-accent-blue) !important;
+}
+
+.btn-primary {
+    background-color: var(--converge-accent-blue);
+    border-color: var(--converge-accent-blue);
+    color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-outline-secondary {
+    color: var(--converge-text-secondary);
+    border-color: var(--converge-border-medium);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--converge-surface);
+    color: var(--converge-text-primary);
+}
+
+/* ========================================
+   NAVBAR COMPONENT STYLES
+======================================== */
+
+/* Logo styling */
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(360deg);
+}
+
+/* Guest Layout logo animation - same as navbar */
+a[href="/"] img {
+    transition: transform 0.3s ease;
+}
+
+a[href="/"]:hover img {
+    transform: rotate(360deg);
+}
+
+/* Dark Theme Navbar hover effects and transitions */
+.nav-link:hover {
+    background-color: var(--converge-surface) !important;
+    color: var(--converge-accent-blue) !important;
+    transform: translateY(-1px);
+}
+
+.dropdown-item:hover {
+    background-color: var(--converge-surface) !important;
+    color: var(--converge-accent-blue) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--converge-bg-secondary);
+    border-color: var(--converge-border-light);
+}
+
+.dropdown-divider {
+    border-color: var(--converge-border-light);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+    animation: fadeInUp 0.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   POST LAYOUT COMPONENT STYLES
+======================================== */
+
+/* Post card hover effects */
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Post card base styling */
+article {
+    transition: all 0.2s ease-in-out;
+}
+
+/* ========================================
+   SIDEBAR STYLING
+======================================== */
+
+/* Basic sidebar styling - scrolls naturally with page content */
+
+/* ========================================
+   RESPONSIVE DESIGN ADJUSTMENTS
+======================================== */
+
+@media (max-width: 768px) {
+    #searchBar {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-brand div {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .navbar-brand img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY AND FOCUS STATES
+======================================== */
+
+.nav-link:focus,
+.dropdown-item:focus,
+.btn:focus {
+    outline: 2px solid var(--converge-accent-blue);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --converge-accent-blue: #000080;
+        --converge-accent-orange: #ff6600;
+        --converge-text-primary: #000000;
+        --converge-text-secondary: #000000;
+    }
+}
